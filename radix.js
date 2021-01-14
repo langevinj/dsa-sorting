@@ -8,8 +8,15 @@ function digitCount(num){
     return num.toString().length;
 }
 
-function mostDigits(){
+function mostDigits(arr){
+    let max = 0;
 
+    for(let i=0; i < arr.length; i++){
+        let tempCount = digitCount(arr[i]); 
+        if(tempCount > max) max = tempCount;
+    }
+
+    return max;
 }
 
 
